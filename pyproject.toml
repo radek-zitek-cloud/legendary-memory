@@ -18,6 +18,7 @@ dependencies = [
     "pytest",
     "pytest-asyncio",
     "pytest-cov",
+    "greenlet",
 ]
 
 [project.optional-dependencies]
