@@ -154,6 +154,24 @@ Standard error response shapes. Custom exception handlers in FastAPI. User feedb
 * Frontend: sentry-vue, console logging, UX-level error capture
 
 ---
+## 🛰 Microservices Architecture
+
+This repository demonstrates a lightweight microservices setup. The main entry
+point is an **API Gateway** implemented with FastAPI. It proxies requests to the
+individual services.
+
+### Services
+
+- **Auth Service** – Provides user registration and login backed by PostgreSQL.
+- **Echo Service** – Simple test service returning the provided message.
+
+Each service exposes its own OpenAPI schema and runs independently. They can be
+deployed separately and scaled as needed.
+
+The gateway simply forwards requests to the appropriate service. Additional
+services can be mounted by extending the gateway configuration.
+
+---
 
 ## 🧭 Summary
 
