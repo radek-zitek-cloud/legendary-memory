@@ -1,0 +1,38 @@
+[project]
+name = "legendary-memory"
+version = "0.1.0"
+description = "Microservices architecture with FastAPI"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+    "SQLAlchemy>=2.0",
+    "psycopg>=3.1",
+    "aiosqlite",
+    "passlib[bcrypt]",
+    "pydantic",
+    "python-dotenv",
+    "python-jose[cryptography]",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+]
+
+[project.optional-dependencies]
+redis = ["redis"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+addopts = "-s --cov=./ --cov-report=term-missing"
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
